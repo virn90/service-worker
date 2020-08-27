@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>Nearby Wikipedia Entries</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/style.css">
     <link rel="manifest" href="/manifest.webmanifest">
     <link rel="icon" href="https://en.wikipedia.org/static/images/project-logos/enwiki-1.5x.png">
   </head>
@@ -48,6 +48,17 @@
       </p>
     </footer>
     <script src="app.js"></script>
-    <script src="register-sw.js"></script>
+    <script>
+    if ('serviceWorker' in navigator) {
+  // declaring scope manually
+  navigator.serviceWorker.register('/service-worker.js', {scope: '/blog2'}).then(function(registration) {
+    console.log('Service worker registration succeeded:', registration);
+  }, /*catch*/ function(error) {
+    console.log('Service worker registration failed:', error);
+  });
+} else {
+  console.log('Service workers are not supported.');
+}
+    </script>
   </body>
 </html>
