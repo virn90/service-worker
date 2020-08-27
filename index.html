@@ -1,33 +1,52 @@
-<html>
-<head>
-<title>Seotechman.com | PWA </title>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-html,body{padding:0;margin:0;background:#fff}
-h1,h2,h2{font-size:24px;color:#000;text-align:center}
-.container{display:flex;justify-content:center;align-items:center;position:relative;margin:auto}
-</style>
-</head>
-<body>
-<div class="container">
-<h1>Welcome To My PWA Page</h1>
-</div>
-<script>
-window.addEventListener('load', () => {
-    if ('serviceWorker' in navigator) {
-        // register service worker
-        navigator.serviceWorker.register('/sw.js').then(
-            () => {
-                console.log('SW registration successful 😍');
-            },
-            err => {
-                console.error('SW registration failed 😠', err)
-            });
-    } else {
-        // Not supported 😥
-    }
-});
-</script>
-</body>
+!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Nearby Wikipedia Entries</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="https://en.wikipedia.org/static/images/project-logos/enwiki-1.5x.png">
+  </head>
+  <body>
+    <header>
+      <h1>
+        Nearby Wikipedia Entries
+      </h1>
+    </header>
+    <main>
+      <p>
+        There are two steps to go through to find nearby Wikipedia entries:
+      </p>
+      <ol>
+        <li id="step1">
+          Detect your current location:
+          <button id="step1-button">
+            Find Me
+          </button>
+          <p id="step1-result"></p>
+        </li>
+        <li id="step2">
+          Given your location, make an API call to find entries from Wikipedia located nearby:
+          <button id="step2-button">
+            Find Nearby Wikipedia Entries
+          </button>
+          <ul id="step2-result"></ul>
+        </li>
+      </ol>
+    </main>
+    <footer>
+      <p>
+        Copyright 2018 Google Inc.
+        Licensed under <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache 2.0</a>.
+      </p>
+      <p>
+        Original source code can be <a href="https://glitch.com/edit/#!/sleet-expansion">found on Glitch</a>.
+      </p>
+      <p>
+        Wikipedia data is obtained using the <a href="https://www.mediawiki.org/wiki/API:Showing_nearby_wiki_information">public API</a>.
+      </p>
+    </footer>
+    <script src="app.js"></script>
+    <script src="register-sw.js"></script>
+  </body>
 </html>
