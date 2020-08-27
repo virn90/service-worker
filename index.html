@@ -51,7 +51,7 @@
     <script>
     if ('serviceWorker' in navigator) {
   // declaring scope manually
-  navigator.serviceWorker.register('/service-worker.js', {scope: '/blog2'}).then(function(registration) {
+  navigator.serviceWorker.register('/service-worker.js', {scope: '/?blog=2'}).then(function(registration) {
     console.log('Service worker registration succeeded:', registration);
   }, /*catch*/ function(error) {
     console.log('Service worker registration failed:', error);
