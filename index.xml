@@ -2497,8 +2497,10 @@ g.classList.remove(&#39;animable&#39;);
 </script>
 <script>
     if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
       navigator.serviceWorker.register('/sw.js');
-    }
+    });
+  }
   </script>
 <script defer='defer' type='text/javascript'>(function (w,d) {var loader = function () {var s = d.createElement(&quot;script&quot;), tag = d.getElementsByTagName(&quot;script&quot;)[0]; s.src=&quot;https://cdn.iubenda.com/iubenda.js&quot;; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener(&quot;load&quot;, loader, false);}else if(w.attachEvent){w.attachEvent(&quot;onload&quot;, loader);}else{w.onload = loader;}})(window, document);</script>
 <b:if cond='data:view.isError'>
