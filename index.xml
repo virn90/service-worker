@@ -2501,7 +2501,14 @@ g.classList.remove(&#39;animable&#39;);
       navigator.serviceWorker.register('/sw.js');
     });
   }
-  </script>
+	</script>
+	<script>
+		import 'https://cdn.jsdelivr.net/npm/@pwabuilder/pwaupdate';
+
+const el = document.createElement('pwa-update');
+document.body.appendChild(el);
+	</script>
+	<script type="module" src="https://cdn.jsdelivr.net/npm/@pwabuilder/pwainstall@latest/dist/pwa-install.min.js"></script>
 <script defer='defer' type='text/javascript'>(function (w,d) {var loader = function () {var s = d.createElement(&quot;script&quot;), tag = d.getElementsByTagName(&quot;script&quot;)[0]; s.src=&quot;https://cdn.iubenda.com/iubenda.js&quot;; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener(&quot;load&quot;, loader, false);}else if(w.attachEvent){w.attachEvent(&quot;onload&quot;, loader);}else{w.onload = loader;}})(window, document);</script>
 <b:if cond='data:view.isError'>
 <div class='error-wrapper' id='error-wrapper'>
