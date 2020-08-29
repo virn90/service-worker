@@ -143,7 +143,7 @@
 <link href='https://cdn.statically.io/gh/virn90/seotechmancom/42b190d1/firebase.json' rel='firebase'/>
 <link href='http://www.blogger.com/openid-server.g' rel='openid.server'/>
 <link expr:href='data:blog.homepageUrl' rel='openid.delegate'/>
-<link href='https://raw.githubusercontent.com/virn90/service-worker/master/manifest.webmanifest' rel='manifest'/>
+<link href='/manifest.webmanifest' rel='manifest'/>
 <link expr:href='data:blog.homepageUrl + &quot;?source=pwa&quot;' rel='home'/>
 <link expr:href='data:blog.homepageUrl + &quot;?source=pwa&quot;' rel='msapplication-start-url'/>
 <!--<link expr:href='data:blog.canonicalHomepageUrl + &quot;favicon.ico&quot;' rel='icon' type='image/x-icon'/>-->
