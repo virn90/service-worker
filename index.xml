@@ -2496,11 +2496,19 @@ svg.classList.remove(&#39;animated&#39;);
 g.classList.remove(&#39;animable&#39;);
 </script>
 <script>
-    if ('serviceWorker' in navigator) {
-    window.addEventListener('load', () => {
-      navigator.serviceWorker.register('/sw.js');
+    if('serviceWorker' in navigator) {
+    window.addEventListener('load', function() {
+        navigator.serviceWorker.register('/sw.js', {scope: '/'})
+        .then((reg) => {
+        // registration success
+        console.log('Registration success');
+       
+        }).catch((err) => {
+        //registration failed
+        console.log('Registration failed: ' + err);
+        });
     });
-  }
+}
 	</script>
 	<script>
 		import 'https://cdn.jsdelivr.net/npm/@pwabuilder/pwaupdate';
