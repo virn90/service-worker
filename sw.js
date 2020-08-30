@@ -3,9 +3,9 @@
 // files array to cache
 let filesArr = [
     '/',
-    './p/contact.html',
-    './p/about-us.html',
-    './favicon.ico'
+    './style.css',
+    './index.html',
+    './work-box-config.js'
   ]
   
   self.addEventListener('install', function(e) {
