@@ -5,7 +5,7 @@ let filesArr = [
     '/',
     './style.css',
     './index.html',
-    './work-box-config.js'
+    './workbox-config.js'
   ]
   
   self.addEventListener('install', function(e) {
